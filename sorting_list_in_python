@@ -1,0 +1,23 @@
+length = int(input("Enter the size of list:"))
+num_list = []
+for i in range(0, length):
+    elements = int(input("Enter the elements:"))
+    num_list.append(elements)
+print()
+print("Your elements are:")
+for k in num_list:
+
+    print(k,end=" ")
+thrd = 0
+for k in range(0, length-1):
+    for j in range(0,length-1):
+        if num_list[j]> num_list[j+1]:
+
+            thrd = num_list[j]
+            num_list[j]=num_list[j+1]
+            num_list[j+1]=thrd
+print()
+print("The sorted list is :")
+for k in num_list:
+
+    print(k,end=" ")
